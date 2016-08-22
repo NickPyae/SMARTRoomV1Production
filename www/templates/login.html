@@ -1,0 +1,34 @@
+<ion-view style="background-image: url('./img/background.png')">
+    <div ng-if="loadLogin">
+        <form ng-submit="login(user,pw,ip, enableHTTPS)">
+            <div class="list card" style="background:none;">
+
+                <div class="item item-avatar" style="background:none;">
+                    <img src="./img/icon.png" style="top:38px;background:white;">
+                        <h1 style="color:white;">SMARTRoom</h1>
+                    <span ng-class="validation.col">{{validation.msg}}</span>
+                </div>
+                <label class="item item-input">
+                    <span class="input-label">Username</span>
+                    <input type="text" ng-model="user">
+                </label>
+                <label class="item item-input">
+                    <span class="input-label">Password</span>
+                    <input type="password" ng-model="pw">
+                </label>
+                <label class="item item-input">
+                    <span class="input-label">URL</span>
+                    <input type="text" ng-model="ip">
+                </label>
+                <ion-toggle ng-model="enableHTTPS.checked" toggle-class="toggle-calm">
+                  Enable HTTPS
+                </ion-toggle>
+                <button type="submit"
+                        ng-disabled="!user || !pw || !ip || logginState" style="margin-top:0; background-color: darkgrey; fill-opacity: -4;"
+                        class="item button button-block">
+                    <b class="white">Log In</b>
+                </button>
+            </div>
+        </form>
+    </div>
+</ion-view>

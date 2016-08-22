@@ -1,0 +1,21 @@
+<ion-view>
+	<ion-nav-title class="light">
+		My Reservations
+	</ion-nav-title>
+	<ion-nav-buttons side="right">
+		<button class="button button-dark button-icon-dark icon ion-refresh"
+				ng-click="loadReservations()">
+		</button>
+	</ion-nav-buttons>
+	<ion-content>
+	<ion-list>
+	<ion-item class="item-divider" ng-if="!rooms.length">
+	 	<p>You have no reservations for {{today}}</p>
+	</ion-item>
+	<ion-item class="roomCard item-thumbnail-left item-icon-right" ng-repeat="r in rooms" href="#/tab/reservation-detail/{{r.id}}" >
+		<div room-card ></div>
+	    <i class="icon ion-chevron-right" style="float:right;"></i>
+	</ion-item>
+	</ion-list>
+	</ion-content>
+</ion-view>

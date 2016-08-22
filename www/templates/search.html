@@ -1,0 +1,57 @@
+<ion-view>
+	<ion-nav-title class="light">
+		Room Reservation
+	</ion-nav-title>
+	<ion-nav-buttons side="right">
+		<button class="button button-dark" ng-click="search(options)" ng-disabled="progress.current !=progress.max || !validated">
+			Search
+		</button>
+	</ion-nav-buttons>
+	<ion-content>
+	<!--<progress max="{{progress.max}}" value="{{progress.current}}" style="margin-bottom:0px;"></progress>-->
+		<div class="list card">
+			<!-- <ion-item class="item item-input my-list-input">
+				<span class="input-label">Description</span>
+				<i class="ion-edit placeholder-icon icon"></i>
+				<input type="text" ng-model="options.des">
+			</ion-item> -->
+			<ion-item class="item item-input my-list-input">
+				<span class="input-label">Date</span>
+				<i class="ion-ios7-calendar placeholder-icon icon"></i>
+				<input type="date" ng-model="options.date">
+
+			</ion-item>
+			<ion-item class="item item-input  my-list-input">
+				<span class="input-label">Start Time</span>
+				<i class="ion-ios7-time placeholder-icon icon"></i>
+				<input type="time" ng-model="options.start">
+
+			</ion-item>
+
+			<ion-item class="item item-input  my-list-input">
+				<span class="input-label">End Time</span>
+				<i class="ion-ios7-time-outline placeholder-icon icon"></i>
+				<input type="time" ng-model="options.end">
+
+			</ion-item>
+      <ion-item class="item item-input-inset item-select" style="margin-right: 20px;">
+          <span class="input-label" style="margin-left: 10px;">
+            Floor
+          </span>
+        <select
+          ng-init="userSettings.levelFilter" ng-options="o.displayName for o in filterOptions.level" ng-model="userSettings.levelFilter">
+        </select>
+      </ion-item>
+			<ion-item class="item item-input my-list-input">
+					<span class="input-label">Seating Capacity</span>
+					<i class="ion-ios7-settings placeholder-icon icon"></i>
+					<input type="number" ng-model="options.seats">
+			</ion-item>
+			<!-- Error Validation Message -->
+			<ion-item class="item-divider assertive msg-validation" ng-if="!validated">
+			 	{{errorMsg}}
+			</ion-item>
+		</div>
+
+	</ion-content>
+</ion-view>

@@ -1,0 +1,39 @@
+<ion-view>
+    <ion-nav-title class="light">
+        Settings
+    </ion-nav-title>
+    <ion-content>
+
+
+        <!-- <ion-item nav-clear href="#/tab/account/account-vpn">
+          <i class="lstIcon ion-key" style="padding-left:3px;"></i> &nbsp; &nbsp;&nbsp;Account
+        </ion-item>
+          -->
+
+        <!-- <ion-item class="item-button-right">
+            hye {{ipAddr}}
+            <button class="button button-icon icon ion-edit" style="font-size:0.8em;"></button>
+        </ion-item> -->
+        <!-- <ion-item nav-clear ng-click="setIp">
+          <i class="lstIcon ion-settings"></i> &nbsp; SMARTRoom IP
+        </ion-item> -->
+        <!-- <ion-item nav-clear ng-click="checkAppUpdate()">
+          <i class="lstIcon ion-settings"></i> &nbsp; Check For App Updates
+        </ion-item>     -->
+
+        <div class="list card">
+            <ion-item ui-sref="tab.setting-app">
+                <i class="lstIcon ion-toggle-filled"></i> &nbsp; App Settings
+            </ion-item>
+            <ion-item ui-sref="tab.account-settings">
+                <i class="lstIcon ion-locked"></i> &nbsp; Account Settings
+            </ion-item>
+            <ion-item ng-click="logOut()">
+                <i class="lstIcon ion-log-out"></i> &nbsp; Log Out
+            </ion-item>
+        </div>
+    </ion-content>
+</ion-view>
+  
+
+  
